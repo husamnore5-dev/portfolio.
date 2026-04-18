@@ -3,50 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hossam | Developer</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;700&display=swap" rel="stylesheet">
+<title>Hossam | Portfolio</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
 body{
-    font-family:'Cairo', sans-serif;
+    margin:0;
+    font-family:Arial;
+    direction:rtl;
     background:#0b1220;
     color:white;
 }
 
-/* NAVBAR */
+/* Navbar */
 nav{
     position:fixed;
     top:0;
     width:100%;
-    background:rgba(17,26,46,0.95);
+    background:#111a2e;
     display:flex;
     justify-content:space-between;
     padding:15px 30px;
-    backdrop-filter:blur(10px);
-    z-index:1000;
 }
 
 nav a{
     color:white;
     text-decoration:none;
     margin:0 10px;
-    font-size:14px;
-    transition:0.3s;
 }
 
-nav a:hover{
-    color:#38bdf8;
-}
-
-/* HERO */
+/* Hero */
 .hero{
     height:100vh;
     display:flex;
@@ -55,100 +40,51 @@ nav a:hover{
     align-items:center;
     text-align:center;
     background:linear-gradient(135deg,#2563eb,#06b6d4);
-    padding:20px;
 }
 
 .hero h1{
-    font-size:45px;
-    margin-bottom:10px;
+    font-size:40px;
 }
 
 .hero p{
-    font-size:18px;
     opacity:0.9;
 }
 
-.btn{
-    margin-top:20px;
-    padding:10px 25px;
-    background:#0b1220;
-    border-radius:8px;
-    color:white;
-    text-decoration:none;
-    transition:0.3s;
-}
-
-.btn:hover{
-    transform:scale(1.05);
-}
-
-/* SECTIONS */
-section{
-    padding:80px 20px;
-    max-width:1100px;
-    margin:auto;
-}
-
-h2{
-    color:#38bdf8;
-    margin-bottom:20px;
-}
-
-/* GRID */
+/* Grid */
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
+    padding:60px;
+    max-width:1100px;
+    margin:auto;
 }
 
-/* CARD */
+/* Card */
 .card{
     background:#111a2e;
     padding:25px;
     border-radius:12px;
-    transition:0.4s;
-    opacity:0;
-    transform:translateY(40px);
-}
-
-.card.show{
-    opacity:1;
-    transform:translateY(0);
+    text-align:center;
+    transition:0.3s;
+    text-decoration:none;
+    color:white;
+    display:block;
 }
 
 .card:hover{
-    transform:translateY(-10px);
+    transform:translateY(-8px);
     background:#1c2a4a;
 }
 
-/* CONTACT */
-.contact{
-    background:#111a2e;
-    padding:30px;
-    border-radius:12px;
-    text-align:center;
-}
-
-/* FOOTER */
+/* Footer */
 footer{
     text-align:center;
     padding:20px;
     background:#111a2e;
 }
-
-/* WHATSAPP */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25d366;
-    padding:15px;
-    border-radius:50%;
-    text-decoration:none;
-    color:white;
-    font-size:20px;
-}
 </style>
+
 </head>
 
 <body>
@@ -157,112 +93,51 @@ footer{
 <nav>
 <div><b>Hossam Dev</b></div>
 <div>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+<a href="index.html">Home</a>
+<a href="contact.html">Contact</a>
 </div>
 </nav>
 
 <!-- HERO -->
-<div class="hero" id="home">
-<h1>أنا مطور برمجيات 💻</h1>
-<p>ببني مواقع وتطبيقات حديثة باحترافية عالية</p>
-<a class="btn" href="#contact">تواصل معي</a>
+<div class="hero">
+<h1>أنا Hossam 💻</h1>
+<p>مطور مواقع وتطبيقات احترافية</p>
 </div>
 
-<!-- ABOUT -->
-<section>
-<h2>من أنا</h2>
-<p>
-مطور Front-End متخصص في بناء مواقع حديثة وسريعة باستخدام HTML, CSS, JS
-مع تركيز على الأداء والتصميم العصري.
-</p>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-<h2>الخدمات</h2>
-
+<!-- SERVICES LINKS -->
 <div class="grid">
 
-<div class="card">
-<h3>🌐 مواقع ويب</h3>
-<p>تصميم مواقع شركات ومتاجر احترافية</p>
-</div>
+<a class="card" href="web.html">
+<h3>🌐 تطوير مواقع</h3>
+<p>اضغط للدخول</p>
+</a>
 
-<div class="card">
+<a class="card" href="mobile.html">
 <h3>📱 تطبيقات موبايل</h3>
-<p>Android & iOS Apps</p>
-</div>
+<p>اضغط للدخول</p>
+</a>
 
-<div class="card">
+<a class="card" href="uiux.html">
 <h3>🎨 UI/UX</h3>
-<p>تصميم واجهات حديثة</p>
-</div>
+<p>اضغط للدخول</p>
+</a>
 
-<div class="card">
-<h3>🚀 SEO</h3>
-<p>تحسين ظهور موقعك في Google</p>
-</div>
+<a class="card" href="seo.html">
+<h3>🔍 SEO</h3>
+<p>اضغط للدخول</p>
+</a>
 
-</div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-<h2>المشاريع</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Project One</h3>
-<p>Landing Page لشركة حقيقية</p>
-</div>
-
-<div class="card">
-<h3>Project Two</h3>
-<p>Dashboard System</p>
-</div>
-
-<div class="card">
-<h3>Project Three</h3>
-<p>E-Commerce UI</p>
-</div>
+<a class="card" href="contact.html">
+<h3>📩 تواصل معي</h3>
+<p>اضغط للدخول</p>
+</a>
 
 </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-<h2>تواصل معي</h2>
-
-<div class="contact">
-<p>📧 husamnore5@gmail.com</p>
-<p>📱 01094673264</p>
-</div>
-</section>
 
 <!-- FOOTER -->
 <footer>
 © 2026 - Hossam Portfolio
 </footer>
-
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/201094673264">💬</a>
-
-<script>
-const cards = document.querySelectorAll(".card");
-
-window.addEventListener("scroll", () => {
-    cards.forEach(card => {
-        const top = card.getBoundingClientRect().top;
-        if(top < window.innerHeight - 100){
-            card.classList.add("show");
-        }
-    });
-});
-</script>
 
 </body>
 </html>
