@@ -6,13 +6,8 @@
 <title>Hossam | Portfolio</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body{
+    margin:0;
     font-family:Arial;
     direction:rtl;
     background:#0b1220;
@@ -48,14 +43,6 @@ nav a{
     background:linear-gradient(135deg,#2563eb,#06b6d4);
 }
 
-.hero h1{
-    font-size:42px;
-}
-
-.hero p{
-    opacity:0.9;
-}
-
 /* GRID */
 .grid{
     display:grid;
@@ -64,9 +51,6 @@ nav a{
     padding:60px;
     max-width:1100px;
     margin:auto;
-
-    position:relative;
-    z-index:2;
 }
 
 /* CARD */
@@ -80,26 +64,11 @@ nav a{
     color:white;
     transition:0.3s;
     cursor:pointer;
-
-    position:relative;
-    z-index:2;
 }
 
 .card:hover{
     transform:translateY(-8px);
     background:#1c2a4a;
-}
-
-/* IMPORTANT FIX */
-a{
-    pointer-events:auto;
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:20px;
-    background:#111a2e;
 }
 </style>
 
@@ -111,8 +80,8 @@ footer{
 <nav>
 <div><b>Hossam Dev</b></div>
 <div>
-<a href="index.html">Home</a>
-<a href="contact.html">Contact</a>
+<a href="index.html">الرئيسية</a>
+<a href="contact.html">تواصل</a>
 </div>
 </nav>
 
@@ -122,40 +91,35 @@ footer{
 <p>مطور مواقع وتطبيقات احترافية</p>
 </div>
 
-<!-- SERVICES -->
+<!-- SERVICES (IMPORTANT LINKS FIXED) -->
 <div class="grid">
 
-<a class="card" href="web.html">
-<h3>🌐 تطوير مواقع</h3>
-<p>اضغط للدخول</p>
+<a class="card" href="./web.html">
+<h2>🌐 تطوير مواقع</h2>
+<p>ادخل على الخدمة</p>
 </a>
 
-<a class="card" href="mobile.html">
-<h3>📱 تطبيقات موبايل</h3>
-<p>اضغط للدخول</p>
+<a class="card" href="./mobile.html">
+<h2>📱 تطبيقات موبايل</h2>
+<p>ادخل على الخدمة</p>
 </a>
 
-<a class="card" href="uiux.html">
-<h3>🎨 UI/UX</h3>
-<p>اضغط للدخول</p>
+<a class="card" href="./uiux.html">
+<h2>🎨 UI/UX</h2>
+<p>ادخل على الخدمة</p>
 </a>
 
-<a class="card" href="seo.html">
-<h3>🔍 SEO</h3>
-<p>اضغط للدخول</p>
+<a class="card" href="./seo.html">
+<h2>🔍 SEO</h2>
+<p>ادخل على الخدمة</p>
 </a>
 
-<a class="card" href="contact.html">
-<h3>📩 تواصل معي</h3>
-<p>اضغط للدخول</p>
+<a class="card" href="./contact.html">
+<h2>📩 تواصل معي</h2>
+<p>ادخل على الخدمة</p>
 </a>
 
 </div>
-
-<!-- FOOTER -->
-<footer>
-© 2026 - Hossam Portfolio
-</footer>
 
 </body>
 </html>
