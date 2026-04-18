@@ -3,31 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Hossam | Developer Portfolio</title>
+<title>Hossam | Developer</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700&display=swap" rel="stylesheet">
-
-<!-- Icons -->
-<script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;700&display=swap" rel="stylesheet">
 
 <style>
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
     font-family:'Cairo', sans-serif;
     background:#0b1220;
     color:white;
 }
 
-/* Navbar */
+/* NAVBAR */
 nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(17,26,46,0.95);
     display:flex;
     justify-content:space-between;
-    align-items:center;
     padding:15px 30px;
-    background:#111a2e;
-    position:sticky;
-    top:0;
+    backdrop-filter:blur(10px);
     z-index:1000;
 }
 
@@ -36,21 +39,27 @@ nav a{
     text-decoration:none;
     margin:0 10px;
     font-size:14px;
+    transition:0.3s;
 }
 
 nav a:hover{
     color:#38bdf8;
 }
 
-/* Hero */
+/* HERO */
 .hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:90px 20px;
     background:linear-gradient(135deg,#2563eb,#06b6d4);
+    padding:20px;
 }
 
 .hero h1{
-    font-size:40px;
+    font-size:45px;
     margin-bottom:10px;
 }
 
@@ -60,18 +69,22 @@ nav a:hover{
 }
 
 .btn{
-    display:inline-block;
     margin-top:20px;
-    padding:10px 20px;
-    background:#0f172a;
-    color:white;
+    padding:10px 25px;
+    background:#0b1220;
     border-radius:8px;
+    color:white;
     text-decoration:none;
+    transition:0.3s;
 }
 
-/* Sections */
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* SECTIONS */
 section{
-    padding:60px 20px;
+    padding:80px 20px;
     max-width:1100px;
     margin:auto;
 }
@@ -81,21 +94,21 @@ h2{
     margin-bottom:20px;
 }
 
-/* Grid */
+/* GRID */
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
 }
 
-/* Cards */
+/* CARD */
 .card{
     background:#111a2e;
-    padding:20px;
+    padding:25px;
     border-radius:12px;
     transition:0.4s;
     opacity:0;
-    transform:translateY(30px);
+    transform:translateY(40px);
 }
 
 .card.show{
@@ -108,7 +121,7 @@ h2{
     background:#1c2a4a;
 }
 
-/* Contact */
+/* CONTACT */
 .contact{
     background:#111a2e;
     padding:30px;
@@ -116,15 +129,14 @@ h2{
     text-align:center;
 }
 
-/* Footer */
+/* FOOTER */
 footer{
     text-align:center;
     padding:20px;
     background:#111a2e;
-    margin-top:20px;
 }
 
-/* WhatsApp */
+/* WHATSAPP */
 .whatsapp{
     position:fixed;
     bottom:20px;
@@ -132,8 +144,8 @@ footer{
     background:#25d366;
     padding:15px;
     border-radius:50%;
-    color:white;
     text-decoration:none;
+    color:white;
     font-size:20px;
 }
 </style>
@@ -143,7 +155,7 @@ footer{
 
 <!-- NAV -->
 <nav>
-<div><b>Hesham Dev</b></div>
+<div><b>Hossam Dev</b></div>
 <div>
 <a href="#home">Home</a>
 <a href="#services">Services</a>
@@ -155,7 +167,7 @@ footer{
 <!-- HERO -->
 <div class="hero" id="home">
 <h1>أنا مطور برمجيات 💻</h1>
-<p>ببني مواقع وتطبيقات حديثة وسريعة واحترافية</p>
+<p>ببني مواقع وتطبيقات حديثة باحترافية عالية</p>
 <a class="btn" href="#contact">تواصل معي</a>
 </div>
 
@@ -163,8 +175,8 @@ footer{
 <section>
 <h2>من أنا</h2>
 <p>
-مطور Front-End & Web Developer متخصص في بناء مواقع حديثة باستخدام HTML, CSS, JS
-مع تركيز على الأداء والتصميم الاحترافي.
+مطور Front-End متخصص في بناء مواقع حديثة وسريعة باستخدام HTML, CSS, JS
+مع تركيز على الأداء والتصميم العصري.
 </p>
 </section>
 
@@ -180,18 +192,18 @@ footer{
 </div>
 
 <div class="card">
-<h3>📱 تطبيقات</h3>
-<p>تطبيقات موبايل Android & iOS</p>
+<h3>📱 تطبيقات موبايل</h3>
+<p>Android & iOS Apps</p>
 </div>
 
 <div class="card">
 <h3>🎨 UI/UX</h3>
-<p>تصميم واجهات حديثة وسهلة الاستخدام</p>
+<p>تصميم واجهات حديثة</p>
 </div>
 
 <div class="card">
 <h3>🚀 SEO</h3>
-<p>رفع ترتيب موقعك في Google</p>
+<p>تحسين ظهور موقعك في Google</p>
 </div>
 
 </div>
@@ -204,18 +216,18 @@ footer{
 <div class="grid">
 
 <div class="card">
-<h3>Project 1</h3>
-<p>Landing Page لشركة خدمات</p>
+<h3>Project One</h3>
+<p>Landing Page لشركة حقيقية</p>
 </div>
 
 <div class="card">
-<h3>Project 2</h3>
+<h3>Project Two</h3>
 <p>Dashboard System</p>
 </div>
 
 <div class="card">
-<h3>Project 3</h3>
-<p>Online Store UI</p>
+<h3>Project Three</h3>
+<p>E-Commerce UI</p>
 </div>
 
 </div>
@@ -236,10 +248,9 @@ footer{
 © 2026 - Hossam Portfolio
 </footer>
 
-<!-- WhatsApp -->
+<!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/201094673264">💬</a>
 
-<!-- JS Animation -->
 <script>
 const cards = document.querySelectorAll(".card");
 
