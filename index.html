@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hossam | Developer Portfolio</title>
+<title>Hossam | Portfolio</title>
 
 <style>
 *{
@@ -29,7 +29,7 @@ nav{
     justify-content:space-between;
     padding:15px 30px;
     z-index:1000;
-    backdrop-filter:blur(8px);
+    backdrop-filter:blur(10px);
 }
 
 nav a{
@@ -55,7 +55,6 @@ nav a{
 
 .hero p{
     opacity:0.9;
-    margin-top:10px;
 }
 
 /* GRID */
@@ -68,9 +67,10 @@ nav a{
     margin:auto;
 }
 
-/* CARD */
+/* CARD IMPORTANT FIX */
 .card{
-    display:block;
+    display:block;            /* مهم */
+    width:100%;               /* مهم */
     background:#111a2e;
     padding:25px;
     border-radius:12px;
@@ -78,6 +78,9 @@ nav a{
     text-decoration:none;
     color:white;
     transition:0.3s;
+    cursor:pointer;
+    position:relative;
+    z-index:1;
 }
 
 .card:hover{
@@ -91,6 +94,7 @@ footer{
     text-align:center;
     padding:20px;
     background:#111a2e;
+    margin-top:40px;
 }
 
 /* WHATSAPP */
@@ -126,14 +130,28 @@ footer{
 <p>مطور مواقع وتطبيقات احترافية</p>
 </div>
 
-<!-- SERVICES -->
+<!-- SERVICES (FIXED LINKS 100%) -->
 <div class="grid">
 
-<a class="card" href="web.html">🌐 تطوير مواقع</a>
-<a class="card" href="mobile.html">📱 تطبيقات موبايل</a>
-<a class="card" href="uiux.html">🎨 UI/UX</a>
-<a class="card" href="seo.html">🔍 SEO</a>
-<a class="card" href="contact.html">📩 تواصل</a>
+<a class="card" href="web.html">
+🌐 تطوير مواقع
+</a>
+
+<a class="card" href="mobile.html">
+📱 تطبيقات موبايل
+</a>
+
+<a class="card" href="uiux.html">
+🎨 UI/UX
+</a>
+
+<a class="card" href="seo.html">
+🔍 SEO
+</a>
+
+<a class="card" href="contact.html">
+📩 تواصل معي
+</a>
 
 </div>
 
@@ -142,7 +160,7 @@ footer{
 © 2026 - Hossam Portfolio
 </footer>
 
-<!-- WhatsApp -->
+<!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/201094673264">💬</a>
 
 </body>
