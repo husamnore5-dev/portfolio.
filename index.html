@@ -2,8 +2,7 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hossam | Portfolio</title>
+<title>Hossam Portfolio</title>
 
 <style>
 body{
@@ -14,16 +13,11 @@ body{
     color:white;
 }
 
-/* NAV */
 nav{
-    position:fixed;
-    top:0;
-    width:100%;
     background:#111a2e;
+    padding:15px;
     display:flex;
     justify-content:space-between;
-    padding:15px 30px;
-    z-index:1000;
 }
 
 nav a{
@@ -32,92 +26,56 @@ nav a{
     margin:0 10px;
 }
 
-/* HERO */
 .hero{
-    height:100vh;
+    height:60vh;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
-    text-align:center;
+    flex-direction:column;
     background:linear-gradient(135deg,#2563eb,#06b6d4);
 }
 
-/* GRID */
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap:20px;
-    padding:60px;
-    max-width:1100px;
-    margin:auto;
+    padding:40px;
 }
 
-/* CARD */
 .card{
-    display:block;
     background:#111a2e;
-    padding:25px;
-    border-radius:12px;
+    padding:20px;
+    border-radius:10px;
     text-align:center;
     text-decoration:none;
     color:white;
-    transition:0.3s;
-    cursor:pointer;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    background:#1c2a4a;
+    display:block;
 }
 </style>
-
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
-<div><b>Hossam Dev</b></div>
+<div><b>Hossam</b></div>
 <div>
 <a href="index.html">الرئيسية</a>
 <a href="contact.html">تواصل</a>
 </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
 <h1>أنا Hossam 💻</h1>
-<p>مطور مواقع وتطبيقات احترافية</p>
+<p>مطور مواقع وتطبيقات</p>
 </div>
 
-<!-- SERVICES (IMPORTANT LINKS FIXED) -->
 <div class="grid">
 
-<a class="card" href="./web.html">
-<h2>🌐 تطوير مواقع</h2>
-<p>ادخل على الخدمة</p>
-</a>
-
-<a class="card" href="./mobile.html">
-<h2>📱 تطبيقات موبايل</h2>
-<p>ادخل على الخدمة</p>
-</a>
-
-<a class="card" href="./uiux.html">
-<h2>🎨 UI/UX</h2>
-<p>ادخل على الخدمة</p>
-</a>
-
-<a class="card" href="./seo.html">
-<h2>🔍 SEO</h2>
-<p>ادخل على الخدمة</p>
-</a>
-
-<a class="card" href="./contact.html">
-<h2>📩 تواصل معي</h2>
-<p>ادخل على الخدمة</p>
-</a>
+<a class="card" href="web.html">🌐 تطوير مواقع</a>
+<a class="card" href="mobile.html">📱 تطبيقات موبايل</a>
+<a class="card" href="uiux.html">🎨 UI/UX</a>
+<a class="card" href="seo.html">🔍 SEO</a>
+<a class="card" href="contact.html">📩 تواصل</a>
 
 </div>
 
