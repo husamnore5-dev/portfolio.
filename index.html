@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio - مطور برمجيات</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            direction: rtl;
+            background: #0f172a;
+            color: white;
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Navbar */
+        nav {
+            background: #1e293b;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px;
+            background: linear-gradient(135deg, #2563eb, #06b6d4);
+        }
+
+        /* Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+
+        /* Cards */
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s;
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: #334155;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1e293b;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div>💻 Portfolio</div>
+
+        <div>
+            <a href="index.html">الرئيسية</a>
+            <a href="web.html">مواقع</a>
+            <a href="mobile.html">موبايل</a>
+            <a href="uiux.html">UI/UX</a>
+            <a href="seo.html">SEO</a>
+            <a href="contact.html">تواصل</a>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+        <h1>أنا مطور برمجيات 💻</h1>
+        <p>أصمم وأطور مواقع وتطبيقات احترافية</p>
+    </header>
+
+    <!-- SERVICES -->
+    <div class="grid">
+
+        <a class="card" href="web.html">
+            <h3>🌐 تطوير مواقع</h3>
+        </a>
+
+        <a class="card" href="mobile.html">
+            <h3>📱 تطبيقات موبايل</h3>
+        </a>
+
+        <a class="card" href="uiux.html">
+            <h3>🎨 UI/UX</h3>
+        </a>
+
+        <a class="card" href="seo.html">
+            <h3>🔍 SEO</h3>
+        </a>
+
+        <a class="card" href="contact.html">
+            <h3>📩 تواصل معي</h3>
+        </a>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 - جميع الحقوق محفوظة</p>
+        <p>📧 husamnore5@gmail.com | 📱 01094673264</p>
+    </footer>
+
+</body>
+
+</html>
