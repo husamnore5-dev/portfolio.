@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hossam | Portfolio</title>
+<title>Hossam | Developer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;700&display=swap" rel="stylesheet">
 
@@ -24,12 +24,13 @@ body{
 /* NAV */
 nav{
     position:fixed;
-    width:100%;
     top:0;
+    width:100%;
     background:rgba(17,26,46,0.95);
     display:flex;
     justify-content:space-between;
     padding:15px 30px;
+    backdrop-filter:blur(10px);
     z-index:1000;
 }
 
@@ -56,13 +57,13 @@ nav a{
 .btn{
     margin-top:20px;
     padding:10px 25px;
-    background:#111a2e;
+    background:#0b1220;
+    border-radius:8px;
     color:white;
     text-decoration:none;
-    border-radius:8px;
 }
 
-/* SECTIONS */
+/* GRID */
 section{
     padding:80px 20px;
     max-width:1100px;
@@ -123,17 +124,6 @@ footer{
     color:white;
     font-size:20px;
 }
-
-/* CV BUTTON */
-.cv{
-    margin-top:15px;
-    display:inline-block;
-    padding:10px 20px;
-    background:#38bdf8;
-    color:#000;
-    border-radius:8px;
-    text-decoration:none;
-}
 </style>
 
 </head>
@@ -151,12 +141,9 @@ footer{
 </nav>
 
 <div class="hero" id="home">
-<h1>Hossam 👨‍💻</h1>
-<p>Web Developer | Mobile Apps | UI/UX</p>
-
+<h1>أنا مطور برمجيات 💻</h1>
+<p>ببني مواقع وتطبيقات حديثة</p>
 <a class="btn" href="#contact">تواصل معي</a>
-<br>
-<a class="cv" href="#">📄 تحميل CV</a>
 </div>
 
 <section id="services">
@@ -164,8 +151,8 @@ footer{
 
 <div class="grid">
 
-<a class="card" href="web.html">🌐 Web Development</a>
-<a class="card" href="mobile.html">📱 Mobile Apps</a>
+<a class="card" href="web.html">🌐 تطوير مواقع</a>
+<a class="card" href="mobile.html">📱 تطبيقات موبايل</a>
 <a class="card" href="uiux.html">🎨 UI/UX</a>
 <a class="card" href="seo.html">🔍 SEO</a>
 
@@ -176,9 +163,11 @@ footer{
 <h2>المشاريع</h2>
 
 <div class="grid">
+
 <div class="card">Landing Page</div>
 <div class="card">Dashboard</div>
 <div class="card">E-Commerce</div>
+
 </div>
 </section>
 
@@ -191,7 +180,7 @@ footer{
 </div>
 </section>
 
-<footer>© 2026 Hossam Portfolio</footer>
+<footer>© 2026 - Hossam Portfolio</footer>
 
 <a class="whatsapp" href="https://wa.me/201094673264">💬</a>
 
