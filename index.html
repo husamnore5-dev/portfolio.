@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hossam | Developer</title>
+<title>Hossam | Fullstack Developer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;700&display=swap" rel="stylesheet">
 
@@ -52,18 +52,25 @@ nav a{
 }
 
 .hero h1{font-size:45px;}
-.hero p{opacity:0.9;margin-top:10px;}
+.hero h2{margin-top:10px;font-weight:600;}
+.hero p{opacity:0.9;margin-top:10px;max-width:500px;}
 
 .btn{
     margin-top:20px;
-    padding:10px 25px;
+    padding:12px 28px;
     background:#0b1220;
     border-radius:8px;
     color:white;
     text-decoration:none;
+    transition:0.3s;
+    display:inline-block;
 }
 
-/* GRID */
+.btn:hover{
+    background:#020617;
+}
+
+/* SECTION */
 section{
     padding:80px 20px;
     max-width:1100px;
@@ -75,6 +82,7 @@ h2{
     margin-bottom:20px;
 }
 
+/* GRID */
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -93,8 +101,12 @@ h2{
 }
 
 .card:hover{
-    transform:translateY(-10px);
+    transform:translateY(-10px) scale(1.02);
     background:#1c2a4a;
+}
+
+.card h3{
+    margin-bottom:10px;
 }
 
 /* CONTACT */
@@ -140,43 +152,93 @@ footer{
 </div>
 </nav>
 
+<!-- HERO -->
 <div class="hero" id="home">
-<h1>أنا مطور برمجيات 💻</h1>
-<p>ببني مواقع وتطبيقات حديثة</p>
-<a class="btn" href="#contact">تواصل معي</a>
+<h1>أنا حسام 👋</h1>
+<h2>Fullstack Developer</h2>
+
+<p>
+ببني مواقع وتطبيقات سريعة وقابلة للتطوير باستخدام React و Node.js
+</p>
+
+<div>
+<a class="btn" href="#projects">شوف شغلي</a>
+<a class="btn" href="#contact" style="background:#06b6d4;margin-left:10px;">
+توظيفي
+</a>
+</div>
 </div>
 
+<!-- SERVICES -->
 <section id="services">
 <h2>الخدمات</h2>
 
 <div class="grid">
 
-<a class="card" href="web.html">🌐 تطوير مواقع</a>
-<a class="card" href="mobile.html">📱 تطبيقات موبايل</a>
-<a class="card" href="uiux.html">🎨 UI/UX</a>
-<a class="card" href="seo.html">🔍 SEO</a>
+<div class="card">
+<h3>🌐 تطوير مواقع</h3>
+<p>إنشاء مواقع حديثة وسريعة ومتجاوبة مع جميع الأجهزة</p>
+</div>
+
+<div class="card">
+<h3>📱 تطبيقات موبايل</h3>
+<p>تطوير تطبيقات باستخدام تقنيات حديثة</p>
+</div>
+
+<div class="card">
+<h3>🎨 UI/UX</h3>
+<p>تصميم واجهات جذابة وسهلة الاستخدام</p>
+</div>
+
+<div class="card">
+<h3>🔍 SEO</h3>
+<p>تحسين ظهور موقعك في نتائج البحث</p>
+</div>
 
 </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
 <h2>المشاريع</h2>
 
 <div class="grid">
 
-<div class="card">Landing Page</div>
-<div class="card">Dashboard</div>
-<div class="card">E-Commerce</div>
+<div class="card">
+<h3>E-Commerce Website</h3>
+<p>متجر إلكتروني كامل يحتوي على تسجيل دخول وسلة مشتريات</p>
+<p><b>Tech:</b> React, Node.js, MongoDB</p>
+<a href="#">Live Demo</a> | <a href="#">GitHub</a>
+</div>
+
+<div class="card">
+<h3>Admin Dashboard</h3>
+<p>لوحة تحكم لإدارة المستخدمين والبيانات</p>
+<p><b>Tech:</b> React, API</p>
+<a href="#">Live Demo</a> | <a href="#">GitHub</a>
+</div>
+
+<div class="card">
+<h3>Landing Page</h3>
+<p>صفحة هبوط احترافية لمنتج أو خدمة</p>
+<p><b>Tech:</b> HTML, CSS</p>
+<a href="#">Live Demo</a> | <a href="#">GitHub</a>
+</div>
 
 </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
 <h2>تواصل معي</h2>
 
 <div class="contact">
 <p>📧 husamnore5@gmail.com</p>
 <p>📱 01094673264</p>
+
+<a class="btn" href="mailto:husamnore5@gmail.com">
+ابعتلي ايميل
+</a>
 </div>
 </section>
 
