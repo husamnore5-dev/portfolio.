@@ -26,11 +26,11 @@ nav{
     position:fixed;
     top:0;
     width:100%;
-    background:rgba(17,26,46,0.8);
-    backdrop-filter:blur(10px);
+    background:rgba(17,26,46,0.95);
     display:flex;
     justify-content:space-between;
     padding:15px 30px;
+    backdrop-filter:blur(10px);
     z-index:1000;
 }
 
@@ -38,11 +38,6 @@ nav a{
     color:white;
     text-decoration:none;
     margin:0 10px;
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:#38bdf8;
 }
 
 /* HERO */
@@ -54,12 +49,11 @@ nav a:hover{
     align-items:center;
     text-align:center;
     background:linear-gradient(135deg,#2563eb,#06b6d4);
-    animation:fadeIn 1.5s ease;
 }
 
-.hero h1{font-size:48px;}
-.hero h2{margin-top:10px;}
-.hero p{margin-top:10px;max-width:500px;}
+.hero h1{font-size:45px;}
+.hero h2{margin-top:10px;font-weight:600;}
+.hero p{opacity:0.9;margin-top:10px;max-width:500px;}
 
 .btn{
     margin-top:20px;
@@ -69,11 +63,11 @@ nav a:hover{
     color:white;
     text-decoration:none;
     transition:0.3s;
+    display:inline-block;
 }
 
 .btn:hover{
     background:#020617;
-    transform:scale(1.05);
 }
 
 /* SECTION */
@@ -97,22 +91,22 @@ h2{
 
 /* CARD */
 .card{
+    display:block;
+    text-decoration:none;
+    color:white;
     background:#111a2e;
     padding:25px;
     border-radius:12px;
-    transition:0.4s;
-    opacity:0;
-    transform:translateY(30px);
-}
-
-.card.show{
-    opacity:1;
-    transform:translateY(0);
+    transition:0.3s;
 }
 
 .card:hover{
     transform:translateY(-10px) scale(1.02);
     background:#1c2a4a;
+}
+
+.card h3{
+    margin-bottom:10px;
 }
 
 /* CONTACT */
@@ -130,19 +124,6 @@ footer{
     background:#111a2e;
 }
 
-/* FLOAT BUTTON */
-.float-btn{
-    position:fixed;
-    bottom:20px;
-    left:20px;
-    background:#38bdf8;
-    padding:15px 20px;
-    border-radius:50px;
-    color:black;
-    text-decoration:none;
-    font-weight:bold;
-}
-
 /* WHATSAPP */
 .whatsapp{
     position:fixed;
@@ -151,14 +132,9 @@ footer{
     background:#25d366;
     padding:15px;
     border-radius:50%;
-    color:white;
     text-decoration:none;
-}
-
-/* ANIMATION */
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(20px);}
-    to{opacity:1; transform:translateY(0);}
+    color:white;
+    font-size:20px;
 }
 </style>
 
@@ -178,14 +154,19 @@ footer{
 
 <!-- HERO -->
 <div class="hero" id="home">
-<h1> Hossam Nour 👋</h1>
+<h1>أنا حسام 👋</h1>
 <h2>Fullstack Developer</h2>
 
 <p>
-ببني مواقع سريعة وقابلة للتطوير باستخدام أحدث التقنيات
+ببني مواقع وتطبيقات سريعة وقابلة للتطوير باستخدام React و Node.js
 </p>
 
-<a class="btn" href="#projects">🚀 شوف شغلي</a>
+<div>
+<a class="btn" href="#projects">شوف شغلي</a>
+<a class="btn" href="#contact" style="background:#06b6d4;margin-left:10px;">
+توظيفي
+</a>
+</div>
 </div>
 
 <!-- SERVICES -->
@@ -194,10 +175,25 @@ footer{
 
 <div class="grid">
 
-<div class="card">🌐 تطوير مواقع احترافية</div>
-<div class="card">📱 تطبيقات موبايل</div>
-<div class="card">🎨 تصميم UI/UX</div>
-<div class="card">🔍 تحسين SEO</div>
+<div class="card">
+<h3>🌐 تطوير مواقع</h3>
+<p>إنشاء مواقع حديثة وسريعة ومتجاوبة مع جميع الأجهزة</p>
+</div>
+
+<div class="card">
+<h3>📱 تطبيقات موبايل</h3>
+<p>تطوير تطبيقات باستخدام تقنيات حديثة</p>
+</div>
+
+<div class="card">
+<h3>🎨 UI/UX</h3>
+<p>تصميم واجهات جذابة وسهلة الاستخدام</p>
+</div>
+
+<div class="card">
+<h3>🔍 SEO</h3>
+<p>تحسين ظهور موقعك في نتائج البحث</p>
+</div>
 
 </div>
 </section>
@@ -209,20 +205,24 @@ footer{
 <div class="grid">
 
 <div class="card">
-<h3>E-Commerce</h3>
-<p>متجر كامل (Login + Cart + Payments)</p>
-<p>React / Node</p>
+<h3>E-Commerce Website</h3>
+<p>متجر إلكتروني كامل يحتوي على تسجيل دخول وسلة مشتريات</p>
+<p><b>Tech:</b> React, Node.js, MongoDB</p>
+<a href="#">Live Demo</a> | <a href="#">GitHub</a>
 </div>
 
 <div class="card">
-<h3>Dashboard</h3>
-<p>لوحة تحكم متكاملة</p>
-<p>React / API</p>
+<h3>Admin Dashboard</h3>
+<p>لوحة تحكم لإدارة المستخدمين والبيانات</p>
+<p><b>Tech:</b> React, API</p>
+<a href="#">Live Demo</a> | <a href="#">GitHub</a>
 </div>
 
 <div class="card">
 <h3>Landing Page</h3>
-<p>صفحة تسويقية احترافية</p>
+<p>صفحة هبوط احترافية لمنتج أو خدمة</p>
+<p><b>Tech:</b> HTML, CSS</p>
+<a href="#">Live Demo</a> | <a href="#">GitHub</a>
 </div>
 
 </div>
@@ -237,28 +237,14 @@ footer{
 <p>📱 01094673264</p>
 
 <a class="btn" href="mailto:husamnore5@gmail.com">
-📩 ابعتلي
+ابعتلي ايميل
 </a>
 </div>
 </section>
 
-<footer>© 2026 - Hossam</footer>
+<footer>© 2026 - Hossam Portfolio</footer>
 
 <a class="whatsapp" href="https://wa.me/201094673264">💬</a>
-<a class="float-btn" href="#contact">Hire Me</a>
-
-<script>
-const cards = document.querySelectorAll(".card");
-
-window.addEventListener("scroll", ()=>{
-    cards.forEach(card=>{
-        const top = card.getBoundingClientRect().top;
-        if(top < window.innerHeight - 50){
-            card.classList.add("show");
-        }
-    });
-});
-</script>
 
 </body>
 </html>
