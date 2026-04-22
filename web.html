@@ -2,84 +2,62 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Web Development | Hossam</title>
+<title>Web Development</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;700&display=swap" rel="stylesheet">
 
 <style>
-body{
-    margin:0;
-    font-family:'Cairo', sans-serif;
-    background:#0b1220;
-    color:white;
+body{margin:0;font-family:'Cairo';background:#0b1220;color:white;}
+
+nav{
+position:fixed;top:0;width:100%;
+background:#111a2e;
+padding:15px;
+display:flex;
+justify-content:space-between;
 }
+
+nav a{color:white;text-decoration:none;margin:0 10px;}
 
 header{
-    padding:80px 20px;
-    text-align:center;
-    background:linear-gradient(135deg,#2563eb,#06b6d4);
+padding:120px 20px;
+text-align:center;
+background:linear-gradient(135deg,#2563eb,#06b6d4);
 }
 
-section{
-    max-width:1000px;
-    margin:auto;
-    padding:40px 20px;
-}
+section{max-width:900px;margin:auto;padding:40px 20px;}
 
-.card{
-    background:#111a2e;
-    padding:20px;
-    border-radius:12px;
-    margin-bottom:20px;
-    transition:0.3s;
-}
+.card{background:#111a2e;padding:20px;margin-bottom:20px;border-radius:12px;}
 
-.card:hover{
-    transform:translateY(-5px);
-}
-
-a{
-    color:#38bdf8;
-    text-decoration:none;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:10px 20px;
-    background:#0b1220;
-    border-radius:8px;
-    color:white;
-}
+.btn{display:inline-block;margin-top:20px;padding:10px 20px;background:#0b1220;color:white;text-decoration:none;border-radius:8px;}
 </style>
 </head>
 
 <body>
 
+<nav>
+<div>Hossam Dev</div>
+<a href="index.html">Home</a>
+</nav>
+
 <header>
 <h1>🌐 Web Development</h1>
-<p>ببني مواقع حديثة وسريعة وقابلة للتطوير</p>
-<a class="btn" href="index.html">رجوع للرئيسية</a>
+<p>ببني مواقع حديثة وسريعة</p>
+<a class="btn" href="index.html">رجوع</a>
 </header>
 
 <section>
+<div class="card">
+<h2>E-Commerce Systems</h2>
+</div>
+
+<div class="card">
+<h2>Admin Dashboards</h2>
+</div>
 
 <div class="card">
 <h2>Landing Pages</h2>
-<p>تصميم صفحات هبوط احترافية للشركات والمنتجات</p>
 </div>
-
-<div class="card">
-<h2>E-Commerce Websites</h2>
-<p>متاجر إلكترونية كاملة مع الدفع والسلة</p>
-</div>
-
-<div class="card">
-<h2>Dashboards</h2>
-<p>لوحات تحكم لإدارة البيانات والمستخدمين</p>
-</div>
-
 </section>
 
 </body>
