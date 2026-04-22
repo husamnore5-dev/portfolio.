@@ -2,28 +2,126 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>SEO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Services | Hossam</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;700&display=swap" rel="stylesheet">
+
 <style>
-body{background:#0b1220;color:white;font-family:Arial;direction:rtl;}
-.container{max-width:900px;margin:auto;padding:80px 20px;}
-.box{background:#111a2e;padding:25px;border-radius:12px;}
-a{color:#38bdf8;text-decoration:none;}
+body{
+    margin:0;
+    font-family:'Cairo', sans-serif;
+    background:#0b1220;
+    color:white;
+}
+
+/* NAV */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#111a2e;
+    display:flex;
+    justify-content:space-between;
+    padding:15px 20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+/* HEADER */
+header{
+    padding:120px 20px;
+    text-align:center;
+    background:linear-gradient(135deg,#22c55e,#06b6d4);
+}
+
+header h1{
+    font-size:40px;
+}
+
+/* SECTION */
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* CARD */
+.card{
+    background:#111a2e;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    background:#1c2a4a;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    background:#0b1220;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+.btn:hover{
+    background:#020617;
+}
 </style>
 </head>
+
 <body>
 
-<div class="container">
+<nav>
+<div><b>Hossam Dev</b></div>
+<div>
+<a href="index.html">Home</a>
+<a href="web.html">Web</a>
+<a href="mobile.html">Mobile</a>
+<a href="uiux.html">UI/UX</a>
+</div>
+</nav>
 
-<h1>🔍 SEO</h1>
+<header>
+<h1>🔍 SEO Optimization</h1>
+<p>تحسين ظهور المواقع في محركات البحث وزيادة الزيارات</p>
+<a class="btn" href="index.html">⬅ رجوع للرئيسية</a>
+</header>
 
-<div class="box">
-<p>تحسين ظهور موقعك في Google وزيادة الزوار.</p>
+<section>
+
+<div class="card">
+<h2>On-Page SEO</h2>
+<p>تحسين المحتوى والعناوين والكلمات المفتاحية داخل الموقع</p>
 </div>
 
-<br>
-<a href="index.html">⬅ الرجوع</a>
-
+<div class="card">
+<h2>Technical SEO</h2>
+<p>تحسين سرعة الموقع، الكود، وتجربة المستخدم</p>
 </div>
+
+<div class="card">
+<h2>Performance Optimization</h2>
+<p>رفع سرعة الموقع وتحسين Core Web Vitals</p>
+</div>
+
+<div class="card">
+<h2>Keyword Research</h2>
+<p>اختيار الكلمات المفتاحية المناسبة لجلب زوار أكثر</p>
+</div>
+
+</section>
 
 </body>
 </html>
