@@ -2,28 +2,85 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>Web</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Development | Hossam</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;700&display=swap" rel="stylesheet">
+
 <style>
-body{background:#0b1220;color:white;font-family:Arial;direction:rtl;}
-.container{max-width:900px;margin:auto;padding:80px 20px;}
-.box{background:#111a2e;padding:25px;border-radius:12px;}
-a{color:#38bdf8;text-decoration:none;}
+body{
+    margin:0;
+    font-family:'Cairo', sans-serif;
+    background:#0b1220;
+    color:white;
+}
+
+header{
+    padding:80px 20px;
+    text-align:center;
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+}
+
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.card{
+    background:#111a2e;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    background:#0b1220;
+    border-radius:8px;
+    color:white;
+}
 </style>
 </head>
+
 <body>
 
-<div class="container">
+<header>
+<h1>🌐 Web Development</h1>
+<p>ببني مواقع حديثة وسريعة وقابلة للتطوير</p>
+<a class="btn" href="index.html">رجوع للرئيسية</a>
+</header>
 
-<h1>🌐 تطوير المواقع</h1>
+<section>
 
-<div class="box">
-<p>تصميم مواقع احترافية للشركات والمتاجر.</p>
+<div class="card">
+<h2>Landing Pages</h2>
+<p>تصميم صفحات هبوط احترافية للشركات والمنتجات</p>
 </div>
 
-<br>
-<a href="index.html">⬅ الرجوع</a>
-
+<div class="card">
+<h2>E-Commerce Websites</h2>
+<p>متاجر إلكترونية كاملة مع الدفع والسلة</p>
 </div>
+
+<div class="card">
+<h2>Dashboards</h2>
+<p>لوحات تحكم لإدارة البيانات والمستخدمين</p>
+</div>
+
+</section>
 
 </body>
 </html>
