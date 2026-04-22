@@ -26,7 +26,7 @@ nav{
     position:fixed;
     top:0;
     width:100%;
-    background:rgba(17,26,46,0.95);
+    background:rgba(17,26,46,0.9);
     display:flex;
     justify-content:space-between;
     padding:15px 30px;
@@ -52,8 +52,8 @@ nav a{
 }
 
 .hero h1{font-size:45px;}
-.hero h2{margin-top:10px;font-weight:600;}
-.hero p{opacity:0.9;margin-top:10px;max-width:500px;}
+.hero h2{margin-top:10px;}
+.hero p{margin-top:10px;max-width:500px;}
 
 .btn{
     margin-top:20px;
@@ -95,9 +95,10 @@ h2{
     text-decoration:none;
     color:white;
     background:#111a2e;
-    padding:25px;
+    padding:20px;
     border-radius:12px;
     transition:0.3s;
+    cursor:pointer;
 }
 
 .card:hover{
@@ -105,7 +106,9 @@ h2{
     background:#1c2a4a;
 }
 
-.card h3{
+.card img{
+    width:100%;
+    border-radius:10px;
     margin-bottom:10px;
 }
 
@@ -161,12 +164,7 @@ footer{
 ببني مواقع وتطبيقات سريعة وقابلة للتطوير باستخدام React و Node.js
 </p>
 
-<div>
-<a class="btn" href="#projects">شوف شغلي</a>
-<a class="btn" href="#contact" style="background:#06b6d4;margin-left:10px;">
-توظيفي
-</a>
-</div>
+<a class="btn" href="#projects">🚀 شوف شغلي</a>
 </div>
 
 <!-- SERVICES -->
@@ -175,25 +173,25 @@ footer{
 
 <div class="grid">
 
-<div class="card">
+<a class="card" href="web.html">
 <h3>🌐 تطوير مواقع</h3>
-<p>إنشاء مواقع حديثة وسريعة ومتجاوبة مع جميع الأجهزة</p>
-</div>
+<p>إنشاء مواقع حديثة وسريعة ومتجاوبة</p>
+</a>
 
-<div class="card">
+<a class="card" href="mobile.html">
 <h3>📱 تطبيقات موبايل</h3>
-<p>تطوير تطبيقات باستخدام تقنيات حديثة</p>
-</div>
+<p>تطوير تطبيقات حديثة</p>
+</a>
 
-<div class="card">
+<a class="card" href="uiux.html">
 <h3>🎨 UI/UX</h3>
-<p>تصميم واجهات جذابة وسهلة الاستخدام</p>
-</div>
+<p>تصميم واجهات احترافية</p>
+</a>
 
-<div class="card">
+<a class="card" href="seo.html">
 <h3>🔍 SEO</h3>
-<p>تحسين ظهور موقعك في نتائج البحث</p>
-</div>
+<p>تحسين نتائج البحث</p>
+</a>
 
 </div>
 </section>
@@ -205,22 +203,25 @@ footer{
 <div class="grid">
 
 <div class="card">
+<img src="images/project1.jpg">
 <h3>E-Commerce Website</h3>
-<p>متجر إلكتروني كامل يحتوي على تسجيل دخول وسلة مشتريات</p>
-<p><b>Tech:</b> React, Node.js, MongoDB</p>
+<p>متجر إلكتروني كامل (Login + Cart)</p>
+<p><b>Tech:</b> React, Node.js</p>
 <a href="#">Live Demo</a> | <a href="#">GitHub</a>
 </div>
 
 <div class="card">
+<img src="images/project2.jpg">
 <h3>Admin Dashboard</h3>
-<p>لوحة تحكم لإدارة المستخدمين والبيانات</p>
-<p><b>Tech:</b> React, API</p>
+<p>لوحة تحكم متكاملة</p>
+<p><b>Tech:</b> React</p>
 <a href="#">Live Demo</a> | <a href="#">GitHub</a>
 </div>
 
 <div class="card">
+<img src="images/project3.jpg">
 <h3>Landing Page</h3>
-<p>صفحة هبوط احترافية لمنتج أو خدمة</p>
+<p>صفحة تسويقية احترافية</p>
 <p><b>Tech:</b> HTML, CSS</p>
 <a href="#">Live Demo</a> | <a href="#">GitHub</a>
 </div>
@@ -237,7 +238,7 @@ footer{
 <p>📱 01094673264</p>
 
 <a class="btn" href="mailto:husamnore5@gmail.com">
-ابعتلي ايميل
+📩 ابعتلي
 </a>
 </div>
 </section>
