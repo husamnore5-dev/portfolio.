@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hossam | Fullstack Developer</title>
+<title>Mahmoud | Cybersecurity & Fullstack</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
+/* المتغيرات الأساسية للهوية السيبرانية */
+:root {
+    --primary-green: #00ff41; /* لون الماتريكس */
+    --dark-bg: #050505;
+    --card-bg: #0a0a0a;
+    --accent-red: #ff003c;
+    --terminal-font: 'Fira Code', monospace;
+}
+
 *{
     margin:0;
     padding:0;
@@ -17,8 +26,12 @@
 
 body{
     font-family:'Cairo', sans-serif;
-    background:#0b1220;
-    color:white;
+    background: var(--dark-bg);
+    color: var(--primary-green);
+    /* تأثير خطوط الشاشة القديمة (Scanlines) */
+    background-image: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                      linear-gradient(90deg, rgba(0, 255, 70, 0.03), rgba(0, 255, 70, 0.01), rgba(0, 255, 70, 0.03));
+    background-size: 100% 3px, 3px 100%;
 }
 
 /* NAV */
@@ -26,21 +39,28 @@ nav{
     position:fixed;
     top:0;
     width:100%;
-    background:rgba(17,26,46,0.9);
+    background:rgba(0, 0, 0, 0.9);
     display:flex;
     justify-content:space-between;
     padding:15px 30px;
+    border-bottom: 1px solid var(--primary-green);
     backdrop-filter:blur(10px);
     z-index:1000;
 }
 
 nav a{
-    color:white;
+    color: var(--primary-green);
     text-decoration:none;
     margin:0 10px;
+    font-size: 14px;
+    text-transform: uppercase;
 }
 
-/* HERO */
+nav a:hover {
+    text-shadow: 0 0 8px var(--primary-green);
+}
+
+/* HERO SECTION - Matrix Style */
 .hero{
     height:100vh;
     display:flex;
@@ -48,26 +68,42 @@ nav a{
     justify-content:center;
     align-items:center;
     text-align:center;
-    background:linear-gradient(135deg,#2563eb,#06b6d4);
+    border-bottom: 1px solid var(--primary-green);
 }
 
-.hero h1{font-size:45px;}
-.hero h2{margin-top:10px;}
-.hero p{margin-top:10px;max-width:500px;}
+.hero h1{
+    font-size:60px;
+    font-family: var(--terminal-font);
+    text-shadow: 0 0 10px var(--primary-green);
+}
+
+.hero h1::before { content: "> "; opacity: 0.7; }
+
+.hero h2{
+    margin-top:10px;
+    color: white;
+    background: var(--primary-green);
+    color: black;
+    padding: 0 10px;
+}
 
 .btn{
-    margin-top:20px;
+    margin-top:30px;
     padding:12px 28px;
-    background:#0b1220;
-    border-radius:8px;
-    color:white;
+    background: transparent;
+    border: 1px solid var(--primary-green);
+    color: var(--primary-green);
     text-decoration:none;
-    transition:0.3s;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display:inline-block;
+    font-family: var(--terminal-font);
 }
 
 .btn:hover{
-    background:#020617;
+    background: var(--primary-green);
+    color: black;
+    box-shadow: 0 0 20px var(--primary-green);
+    transform: scale(1.05);
 }
 
 /* SECTION */
@@ -78,174 +114,162 @@ section{
 }
 
 h2{
-    color:#38bdf8;
-    margin-bottom:20px;
+    color: var(--primary-green);
+    margin-bottom:40px;
+    font-family: var(--terminal-font);
+    border-right: 4px solid var(--primary-green);
+    padding-right: 15px;
 }
 
 /* GRID */
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
 /* CARD */
 .card{
     display:block;
     text-decoration:none;
-    color:white;
-    background:#111a2e;
-    padding:20px;
-    border-radius:12px;
-    transition:0.3s;
-    cursor:pointer;
+    color: #ccc;
+    background: var(--card-bg);
+    padding:25px;
+    border: 1px solid #222;
+    border-radius: 4px;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
 .card:hover{
-    transform:translateY(-10px) scale(1.02);
-    background:#1c2a4a;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+    transform: translateY(-5px);
 }
 
-.card img{
-    width:100%;
-    border-radius:10px;
-    margin-bottom:10px;
+.card h3 { color: var(--primary-green); margin-bottom: 10px; }
+
+/* GLITCH EFFECT FOR TITLES */
+.glitch:hover {
+    animation: glitch-anim 0.2s infinite;
+}
+
+@keyframes glitch-anim {
+    0% { transform: translate(0); text-shadow: 2px 0 var(--accent-red); }
+    25% { transform: translate(-2px, 2px); }
+    50% { transform: translate(2px, -2px); text-shadow: -2px 0 #00efff; }
+    100% { transform: translate(0); }
 }
 
 /* CONTACT */
 .contact{
-    background:#111a2e;
-    padding:30px;
-    border-radius:12px;
+    background: #000;
+    border: 1px dashed var(--primary-green);
+    padding:40px;
     text-align:center;
 }
 
-/* FOOTER */
 footer{
     text-align:center;
-    padding:20px;
-    background:#111a2e;
+    padding:30px;
+    font-family: var(--terminal-font);
+    font-size: 12px;
+    border-top: 1px solid #222;
 }
 
-/* WHATSAPP */
 .whatsapp{
     position:fixed;
     bottom:20px;
-    right:20px;
-    background:#25d366;
+    left:20px; /* نقلتها للشمال عشان متبقاش فوق الكلام العربي */
+    background: transparent;
+    border: 1px solid #25d366;
     padding:15px;
     border-radius:50%;
-    text-decoration:none;
-    color:white;
-    font-size:20px;
+    color:#25d366;
+    transition: 0.3s;
 }
+
+.whatsapp:hover { background: #25d366; color: black; box-shadow: 0 0 15px #25d366; }
+
 </style>
-
 </head>
-
 <body>
 
 <nav>
-<div><b>Hossam Dev</b></div>
+<div class="glitch"><b>MAHMOUD_ROOT</b></div>
 <div>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+<a href="#home">// Home</a>
+<a href="#services">// Services</a>
+<a href="#projects">// Projects</a>
+<a href="#contact">// Contact</a>
 </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero" id="home">
-<h1>أنا حسام 👋</h1>
-<h2>Fullstack Developer</h2>
+<h1 class="glitch">محمود</h1>
+<h2>[ Cybersecurity Student @ Al-Azhar ]</h2>
 
-<p>
-ببني مواقع وتطبيقات سريعة وقابلة للتطوير باستخدام React و Node.js
+<p style="margin-top: 20px; color: #888; font-family: 'Fira Code';">
+System status: <span style="color: var(--primary-green);">Online</span><br>
+Skills: C++, Python, Linux, Pen-Testing
 </p>
 
-<a class="btn" href="#projects">🚀 شوف شغلي</a>
+<a class="btn" href="#projects">EXECUTE_PORTFOLIO.exe</a>
 </div>
 
 <!-- SERVICES -->
 <section id="services">
-<h2>الخدمات</h2>
-
+<h2>01. الهجمات والخدمات</h2>
 <div class="grid">
-
-<a class="card" href="web.html">
-<h3>🌐 تطوير مواقع</h3>
-<p>إنشاء مواقع حديثة وسريعة ومتجاوبة</p>
-</a>
-
-<a class="card" href="mobile.html">
-<h3>📱 تطبيقات موبايل</h3>
-<p>تطوير تطبيقات حديثة</p>
-</a>
-
-<a class="card" href="uiux.html">
-<h3>🎨 UI/UX</h3>
-<p>تصميم واجهات احترافية</p>
-</a>
-
-<a class="card" href="seo.html">
-<h3>🔍 SEO</h3>
-<p>تحسين نتائج البحث</p>
-</a>
-
+    <div class="card">
+        <h3>🛡️ اختبار الاختراق</h3>
+        <p>فحص الثغرات الأمنية في الشبكات والمواقع باستخدام Kali Linux.</p>
+    </div>
+    <div class="card">
+        <h3>💻 تطوير البرمجيات</h3>
+        <p>بناء أدوات باستخدام C++ و Python لأتمتة المهام التقنية.</p>
+    </div>
+    <div class="card">
+        <h3>🌐 حماية الويب</h3>
+        <p>تأمين المواقع ضد هجمات الـ SQL Injection والـ XSS.</p>
+    </div>
 </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-<h2>المشاريع</h2>
-
+<h2>02. السجلات المنجزة</h2>
 <div class="grid">
-
-<div class="card">
-<img src="images/project1.jpg">
-<h3>E-Commerce Website</h3>
-<p>متجر إلكتروني كامل (Login + Cart)</p>
-<p><b>Tech:</b> React, Node.js</p>
-<a href="#">Live Demo</a> | <a href="#">GitHub</a>
-</div>
-
-<div class="card">
-<img src="images/project2.jpg">
-<h3>Admin Dashboard</h3>
-<p>لوحة تحكم متكاملة</p>
-<p><b>Tech:</b> React</p>
-<a href="#">Live Demo</a> | <a href="#">GitHub</a>
-</div>
-
-<div class="card">
-<img src="images/project3.jpg">
-<h3>Landing Page</h3>
-<p>صفحة تسويقية احترافية</p>
-<p><b>Tech:</b> HTML, CSS</p>
-<a href="#">Live Demo</a> | <a href="#">GitHub</a>
-</div>
-
+    <div class="card">
+        <h3>Network Scanner Tool</h3>
+        <p>أداة مخصصة لفحص المنافذ المفتوحة داخل الشبكات المحلية.</p>
+        <p style="font-family: 'Fira Code'; font-size: 12px;">Tech: Python, Nmap</p>
+    </div>
+    <div class="card">
+        <h3>Personal Portfolio</h3>
+        <p>موقعك الحالي المصمم بأسلوب Terminal احترافي.</p>
+        <p style="font-family: 'Fira Code'; font-size: 12px;">Tech: HTML, CSS</p>
+    </div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-<h2>تواصل معي</h2>
-
+<h2>03. إنشاء اتصال</h2>
 <div class="contact">
-<p>📧 husamnore5@gmail.com</p>
-<p>📱 01094673264</p>
-
-<a class="btn" href="mailto:husamnore5@gmail.com">
-📩 ابعتلي
-</a>
+    <p>root@mahmoud:~$ mail -s "Work" husamnore5@gmail.com</p>
+    <a class="btn" href="mailto:husamnore5@gmail.com">ارسل إشارة (Email)</a>
 </div>
 </section>
 
-<footer>© 2026 - Hossam Portfolio</footer>
+<footer>
+    [ TERMINAL END ] <br>
+    © 2026 Mahmoud - Faculty of Computers & AI, Al-Azhar University
+</footer>
 
-<a class="whatsapp" href="https://wa.me/201094673264">💬</a>
+<a class="whatsapp" href="https://wa.me/201094673264">SECURE_CHAT</a>
 
 </body>
 </html>
