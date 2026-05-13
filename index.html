@@ -1,249 +1,117 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hossam | Fullstack Developer</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Cairo', sans-serif;
-    background:#0b1220;
-    color:white;
-}
-
-/* NAV */
-nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:rgba(17,26,46,0.9);
-    display:flex;
-    justify-content:space-between;
-    padding:15px 30px;
-    backdrop-filter:blur(10px);
-    z-index:1000;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 10px;
-}
-
-/* HERO */
-.hero{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:linear-gradient(135deg,#2563eb,#06b6d4);
-}
-
-.hero h1{font-size:45px;}
-.hero h2{margin-top:10px;}
-.hero p{margin-top:10px;max-width:500px;}
-
-.btn{
-    margin-top:20px;
-    padding:12px 28px;
-    background:#0b1220;
-    border-radius:8px;
-    color:white;
-    text-decoration:none;
-    transition:0.3s;
-    display:inline-block;
-}
-
-.btn:hover{
-    background:#020617;
-}
-
-/* SECTION */
-section{
-    padding:80px 20px;
-    max-width:1100px;
-    margin:auto;
-}
-
-h2{
-    color:#38bdf8;
-    margin-bottom:20px;
-}
-
-/* GRID */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-/* CARD */
-.card{
-    display:block;
-    text-decoration:none;
-    color:white;
-    background:#111a2e;
-    padding:20px;
-    border-radius:12px;
-    transition:0.3s;
-    cursor:pointer;
-}
-
-.card:hover{
-    transform:translateY(-10px) scale(1.02);
-    background:#1c2a4a;
-}
-
-.card img{
-    width:100%;
-    border-radius:10px;
-    margin-bottom:10px;
-}
-
-/* CONTACT */
-.contact{
-    background:#111a2e;
-    padding:30px;
-    border-radius:12px;
-    text-align:center;
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:20px;
-    background:#111a2e;
-}
-
-/* WHATSAPP */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25d366;
-    padding:15px;
-    border-radius:50%;
-    text-decoration:none;
-    color:white;
-    font-size:20px;
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hossam | Fullstack Developer & Cybersecurity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: 'Cairo', sans-serif; background: #0b1220; color: white; line-height: 1.6; }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(17, 26, 46, 0.9); display: flex; justify-content: space-between; padding: 15px 30px; backdrop-filter: blur(10px); z-index: 1000; }
+        nav a { color: white; text-decoration: none; margin: 0 10px; }
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg, #2563eb, #06b6d4); }
+        .hero h1 { font-size: 45px; }
+        .btn { margin-top: 20px; padding: 12px 28px; background: #0b1220; border-radius: 8px; color: white; text-decoration: none; transition: 0.3s; display: inline-block; }
+        .btn:hover { background: #020617; }
+        section { padding: 80px 20px; max-width: 1100px; margin: auto; }
+        h2 { color: #38bdf8; margin-bottom: 20px; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: #111a2e; padding: 25px; border-radius: 12px; transition: 0.3s; border: 1px solid #1e293b; position: relative; overflow: hidden; }
+        .card:hover { transform: translateY(-10px); background: #1c2a4a; border-color: #38bdf8; }
+        .card h3 { color: #38bdf8; margin-bottom: 10px; }
+        .card p { font-size: 14px; color: #cbd5e1; margin-bottom: 15px; }
+        .tag { display: inline-block; background: #1e293b; padding: 4px 10px; border-radius: 4px; font-size: 12px; margin: 2px; color: #38bdf8; }
+        .contact { background: #111a2e; padding: 30px; border-radius: 12px; text-align: center; }
+        footer { text-align: center; padding: 20px; background: #111a2e; border-top: 1px solid #1e293b; }
+        .whatsapp { position: fixed; bottom: 20px; right: 20px; background: #25d366; padding: 15px; border-radius: 50%; text-decoration: none; color: white; font-size: 20px; z-index: 1000; }
+    </style>
 </head>
-
 <body>
 
 <nav>
-<div><b>Hossam Dev</b></div>
-<div>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</div>
+    <div><b>Hossam Dev</b></div>
+    <div>
+        <a href="#home">الرئيسية</a>
+        <a href="#services">الخدمات</a>
+        <a href="#projects">المشاريع</a>
+        <a href="#contact">تواصل معي</a>
+    </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero" id="home">
-<h1> Hossam </h1>
-<h2> Cyber ​​security </h2>
-
-<p>
-ببني مواقع وتطبيقات سريعة وقابلة للتطوير باستخدام React و Node.js
-</p>
-
-<a class="btn" href="#projects">🚀 شوف شغلي</a>
+    <h1>Hossam</h1>
+    <h2>Cyber Security & Fullstack Developer</h2>
+    <p>أقوم ببناء تطبيقات ويب آمنة وسريعة، مع التركيز على حماية البيانات ونظم المعلومات.</p>
+    <a class="btn" href="#projects">🚀 استعرض أعمالي</a>
 </div>
 
-<!-- SERVICES -->
 <section id="services">
-<h2>الخدمات</h2>
-
-<div class="grid">
-
-<a class="card" href="web.html">
-<h3>🌐 تطوير مواقع</h3>
-<p>إنشاء مواقع حديثة وسريعة ومتجاوبة</p>
-</a>
-
-<a class="card" href="mobile.html">
-<h3>📱 تطبيقات موبايل</h3>
-<p>تطوير تطبيقات حديثة</p>
-</a>
-
-<a class="card" href="uiux.html">
-<h3>🎨 UI/UX</h3>
-<p>تصميم واجهات احترافية</p>
-</a>
-
-<a class="card" href="seo.html">
-<h3>🔍 SEO</h3>
-<p>تحسين نتائج البحث</p>
-</a>
-
-</div>
+    <h2>الخدمات البرمجية والأمنية</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>🌐 تطوير الويب</h3>
+            <p>بناء مواقع متكاملة (Fullstack) باستخدام أحدث التقنيات لضمان الأداء والحماية.</p>
+        </div>
+        <div class="card">
+            <h3>🛡️ اختبار الاختراق</h3>
+            <p>تقييم أمن الأنظمة واكتشاف الثغرات قبل استغلالها من قبل المهاجمين.</p>
+        </div>
+        <div class="card">
+            <h3>🔒 تأمين البيانات</h3>
+            <p>تطبيق معايير التشفير وحماية الخصوصية لضمان سرية المعلومات (CIA Triad).</p>
+        </div>
+    </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
-<h2>المشاريع</h2>
+    <h2>المشاريع والأبحاث</h2>
+    <div class="grid">
+        <div class="card" style="border: 1px solid #38bdf8;">
+            <div style="font-size: 40px; margin-bottom: 10px;">🛡️</div>
+            <h3>Digital Fortress Blueprints</h3>
+            <p>بحث أكاديمي شامل يستعرض استراتيجيات بناء الحصون الرقمية، مع التركيز على مستويات الدفاع من المستوى الفيزيائي حتى البيانات[cite: 108, 132].</p>
+            <div>
+                <span class="tag">Security Architecture</span>
+                <span class="tag">Cryptography (AES/RSA)</span>
+                <span class="tag">Threat Analysis</span>
+            </div>
+            <p style="margin-top: 10px; font-style: italic;">"Security is a journey, not a destination".</p>
+            <div style="margin-top: 20px;">
+                <a href="./Digital_Fortress_Blueprints.pdf" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: bold;">📖 قراءة البحث</a>
+                <span style="color: #475569; margin: 0 10px;">|</span>
+                <a href="./Digital_Fortress_Blueprints.pdf" download style="color: #38bdf8; text-decoration: none; font-weight: bold;">📥 تحميل PDF</a>
+            </div>
+        </div>
 
-<div class="grid">
+        <div class="card">
+            <h3>E-Commerce Website</h3>
+            <p>متجر إلكتروني كامل يركز على تجربة مستخدم سلسة وعمليات دفع آمنة.</p>
+            <div><span class="tag">React</span> <span class="tag">Node.js</span> <span class="tag">MongoDB</span></div>
+            <a href="#" style="display: block; margin-top: 20px; color: #38bdf8; text-decoration: none;">Live Demo →</a>
+        </div>
 
-<div class="card">
-<img src="images/project1.jpg">
-<h3>E-Commerce Website</h3>
-<p>متجر إلكتروني كامل (Login + Cart)</p>
-<p><b>Tech:</b> React, Node.js</p>
-<a href="#">Live Demo</a> | <a href="#">GitHub</a>
-</div>
-
-<div class="card">
-<img src="images/project2.jpg">
-<h3>Admin Dashboard</h3>
-<p>لوحة تحكم متكاملة</p>
-<p><b>Tech:</b> React</p>
-<a href="#">Live Demo</a> | <a href="#">GitHub</a>
-</div>
-
-<div class="card">
-<img src="images/project3.jpg">
-<h3>Landing Page</h3>
-<p>صفحة تسويقية احترافية</p>
-<p><b>Tech:</b> HTML, CSS</p>
-<a href="#">Live Demo</a> | <a href="#">GitHub</a>
-</div>
-
-</div>
+        <div class="card">
+            <h3>Admin Dashboard</h3>
+            <p>لوحة تحكم لإدارة البيانات والمستخدمين مع نظام صلاحيات متطور (Access Control Lists).</p>
+            <div><span class="tag">React</span> <span class="tag">Tailwind CSS</span></div>
+            <a href="#" style="display: block; margin-top: 20px; color: #38bdf8; text-decoration: none;">GitHub Repo →</a>
+        </div>
+    </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
-<h2>تواصل معي</h2>
-
-<div class="contact">
-<p>📧 husamnore5@gmail.com</p>
-<p>📱 01094673264</p>
-
-<a class="btn" href="mailto:husamnore5@gmail.com">
-📩 ابعتلي
-</a>
-</div>
+    <h2>تواصل معي</h2>
+    <div class="contact">
+        <p>📧 husamnore5@gmail.com</p>
+        <p>📱 01094673264</p>
+        <a class="btn" href="mailto:husamnore5@gmail.com">📩 أرسل بريداً إلكترونياً</a>
+    </div>
 </section>
 
-<footer>© 2026 - Hossam Portfolio</footer>
+<footer>
+    <p>© 2026 - Hossam Nour | Cyber Security Student</p>
+</footer>
 
 <a class="whatsapp" href="https://wa.me/201094673264">💬</a>
 
